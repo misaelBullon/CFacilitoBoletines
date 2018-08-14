@@ -1,0 +1,12 @@
+/*Se colocan aqui todos los marcadores*/
+p{                           /*Selectores de nombre afectan en este caso a la etiquetas p*/
+	color:red;
+		}
+.red{
+	height: 200px;
+	width: 100px;             /*Selectores de Clase */
+	background-color: red;
+}
+#boton-pago{
+	background-color: yellow;
+}
