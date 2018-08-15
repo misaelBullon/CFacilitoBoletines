@@ -3,11 +3,15 @@
 	#8901E8 Violeta
 	#E801AE Violeta claro
 	#FF0141 Rosa
+	#EAE8E8 gris
 */
 html{
 	font-family: 'Muli', sans-serif;
 }
-
+a{
+	text-decoration: none; /*text-decoration modifica el subrayado de los links*/
+	color:#FF0141; /*Modifique el color de la fuente*/
+}
 .container{
 	background: #11998e;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
@@ -25,7 +29,27 @@ html{
 	background-color: white;
 	
 }
+.title{
+	text-transform: uppercase;  /*Modifica el texto de las etiquetas con clase titulo y uppercase pone las letras en mayusculas*/
+    /*Capitalize pone las primeras letras de cada palabra en mayusculas
+    lowercase todas en minusculas*/
 
-td{
-	border: solid 3px;        /*Afecta a todos los td de las tablas*/
+}
+.paragraph{
+	line-height: 1,8em;    /*Modifica la altura de la linea*/
+	font-weight: 400;      /*Modifica el tamaño de las letras*/
+}
+.table{
+	width: 100%;/*Abarca todo el acho disponible de pantalla*/
+	border-spacing: 0; /*Espaciado entre celda y celda*/
+}
+.table td , .table th{/*Aplica a todos los elementos td y th que esten dentro de una clase table*/
+	padding: 1em;
+	text-align: left;
+}
+.table tr:nth-child(odd){/*odd impares, even pares*/
+	background-color: #EAE8E8;
+}
+.fa-star{
+	color: #FCC002;
 }
