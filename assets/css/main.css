@@ -1,3 +1,18 @@
+/*Colores
+	#5101FF Azul
+	#8901E8 Violeta
+	#E801AE Violeta claro
+	#FF0141 Rosa
+*/
+
+
+.container{
+	background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #2C5364, #203A43, #0F2027);
+    background: -o-linear-gradient(left, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 td{
 	border: solid 3px;        /*Afecta a todos los td de las tablas*/
 }
