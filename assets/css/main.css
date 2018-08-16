@@ -2,7 +2,7 @@
 	#5101FF Azul
 	#8901E8 Violeta
 	#E801AE Violeta claro
-	#FF0141 Rosa
+	52B35C Rosa
 	#EAE8E8 gris
 */
 html{
@@ -27,7 +27,10 @@ a{
 	width: 100%;
 	height: 100%;
 	background-color: white;
-	
+	/*box-shadow: diferenciaHorizontal, diferenciaVertical, desenfoque amplitud color*/
+	/*box-shadow: 0 3px 6px 3px #000;*/
+	box-shadow: 0 3px 6px rgba(0,0,0.16), 0 3px 6px rgba(0,0,0.23);/* 0,16 y 0,23 porcentaje de opacidad*/
+	border-radius: 4px;
 }
 .title{
 	text-transform: uppercase;  /*Modifica el texto de las etiquetas con clase titulo y uppercase pone las letras en mayusculas*/
@@ -52,4 +55,30 @@ a{
 }
 .fa-star{
 	color: #FCC002;
+}
+.title-item{
+	/*
+	border-bottom-style: solid;    /*Defino las propiedes del borde: Estilo, ancho,color, y padding
+	border-width: 2px;
+	border-color: #52B35C;
+	*/
+	
+	border-bottom: solid 2px #52B35C;  /*shorthand las pripedades no respetan un orden*/
+	padding-bottom: 1em;
+	/*padding arriba derecha abajo izquierda. Orden de prodiedads del shorthand del padding*/
+	/*padding arribaAbajo derechaIzquerda Orden de prpiedades del shorthand del padding
+	*/
+
+}
+.position{
+	background-color: #52B35C;         
+	color: white;
+	padding: 10px;
+	border-radius: 2em;      /*Shorthand de border-radius*/
+	/*
+	border-top-left-radius: 2em;          /*Define el redondedo de las esquinas
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	*/
 }
