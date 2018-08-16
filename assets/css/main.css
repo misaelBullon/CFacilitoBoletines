@@ -4,6 +4,7 @@
 	#E801AE Violeta claro
 	52B35C Rosa
 	#EAE8E8 gris
+	#52B35C verde
 */
 html{
 	font-family: 'Muli', sans-serif;
@@ -12,6 +13,22 @@ a{
 	text-decoration: none; /*text-decoration modifica el subrayado de los links*/
 	color:#FF0141; /*Modifique el color de la fuente*/
 }
+
+a:link {
+    text-decoration:none;
+    color:	#5101FF;
+}
+a:visited {
+    color:#E801AE;
+}
+
+a:hover{
+    opacity: 0,8;
+}
+a:active{
+	opacity: 0;
+}
+
 .container{
 	background: #11998e;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
@@ -19,8 +36,8 @@ a{
     height: 100vh; /*100 vh representa el alto total de la pantalla*/
     display: flex;  /*Los elementos de este container utilizan flexbox para posicionarse*/
     align-items: center;       /*Coloca los elementos del container en el centro*/
-    justify-content: center;   
-} 
+    justify-content: center;
+}
 .content{
 	max-width: 960px;
 	max-height: 500px;
@@ -30,13 +47,15 @@ a{
 	/*box-shadow: diferenciaHorizontal, diferenciaVertical, desenfoque amplitud color*/
 	/*box-shadow: 0 3px 6px 3px #000;*/
 	box-shadow: 0 3px 6px rgba(0,0,0.16), 0 3px 6px rgba(0,0,0.23);/* 0,16 y 0,23 porcentaje de opacidad*/
-	border-radius: 4px;
+	border-radius: 10px;
+	position: relative;
+	padding: 30px;
 }
 .title{
 	text-transform: uppercase;  /*Modifica el texto de las etiquetas con clase titulo y uppercase pone las letras en mayusculas*/
     /*Capitalize pone las primeras letras de cada palabra en mayusculas
     lowercase todas en minusculas*/
-
+		text-align: center;
 }
 .paragraph{
 	line-height: 1,8em;    /*Modifica la altura de la linea*/
@@ -50,7 +69,7 @@ a{
 	padding: 1em;
 	text-align: left;
 }
-.table tr:nth-child(odd){/*odd impares, even pares*/
+.table tr:nth-child(even){/*odd impares, even pares*/
 	background-color: #EAE8E8;
 }
 .fa-star{
@@ -62,7 +81,7 @@ a{
 	border-width: 2px;
 	border-color: #52B35C;
 	*/
-	
+	font-size: 20px;
 	border-bottom: solid 2px #52B35C;  /*shorthand las pripedades no respetan un orden*/
 	padding-bottom: 1em;
 	/*padding arriba derecha abajo izquierda. Orden de prodiedads del shorthand del padding*/
@@ -70,8 +89,17 @@ a{
 	*/
 
 }
+.main-image{
+	float: left; /*Hace que la imagen quede a la izquierda del texto*/
+	margin-right: 1em; /*Agrega un espacio entre la imagen y el textos*/
+}
+.address{
+	font-weight: bold;
+	color: #52B35C;
+	font-size: 1,2em;
+}
 .position{
-	background-color: #52B35C;         
+	background-color: #52B35C;
 	color: white;
 	padding: 10px;
 	border-radius: 2em;      /*Shorthand de border-radius*/
@@ -81,4 +109,33 @@ a{
 	border-bottom-right-radius: 2em;
 	border-bottom-left-radius: 2em;
 	*/
+	margin: 0,5em;
 }
+.actions{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+.close{
+	height: 40px;
+	width: 40px;
+	color: white;
+	border-radius: 70%;
+	background-color: #52B35C;
+	display: inline-block;
+	box-shadow: 0 1px 2px rgba(0,0,0.16), 0 1px 2px rgba(0,0,0.23);
+	font-weight: 300;
+	cursor: pointer;
+	display:flex;
+	align-items: center;			/*align-items y justify-content centra los elementos*/
+	justify-content: center;
+}
+/*
+	position:
+	static:   no modifica la posicion del elemento
+	relative  modifica la posicion del elemento segun los parametros top right left bottom
+	absolut:  similar al fixed pero ajusta la imagen segun el scrolleo
+	fixed     muestra el elemento siempre ajustado al viewport, lo muestra aunque se este scrolleando
+	sticky    alterna entre absolut y fixed, cuando se scrollea y el elemento comienza a salirse del viewport
+			  lo deja pegado en la pantalla
+*/
