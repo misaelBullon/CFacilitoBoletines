@@ -41,7 +41,7 @@ img{                           /*Ajusta la imagen a la pantalla*/
     justify-content: center;
 }
 .content{
-	font-size: 24px;
+	font-size: 22px;
 	max-width: 960px;
 	max-height: 500px;
 	width: 100%;
@@ -54,7 +54,7 @@ img{                           /*Ajusta la imagen a la pantalla*/
 	position: relative;
 	padding: 1,8em;
 	/*overflow: scroll;*/
-	overflow-y: scroll;               /*Define el comportamiento del contenido que sale del elemento*/
+	overflow-y: hidden;               /*Define el comportamiento del contenido que sale del elemento*/
 	overflow-x: hidden;
 }
 /*Mobile first: Las paginas deben estar diseñadas pensando primero en pantallas pequeñas y luego ajustarlas a pantallas de computadoras mediante media queris*/
