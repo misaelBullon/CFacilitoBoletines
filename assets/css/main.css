@@ -28,7 +28,9 @@ a:hover{
 a:active{
 	opacity: 0;
 }
-
+img{                           /*Ajusta la imagen a la pantalla*/
+	max-width: 100%;
+}
 .container{
 	background: #11998e;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
@@ -39,18 +41,40 @@ a:active{
     justify-content: center;
 }
 .content{
+	font-size: 24px;
 	max-width: 960px;
 	max-height: 500px;
 	width: 100%;
-	height: 100%;
+	height: 80vh;
 	background-color: white;
 	/*box-shadow: diferenciaHorizontal, diferenciaVertical, desenfoque amplitud color*/
 	/*box-shadow: 0 3px 6px 3px #000;*/
 	box-shadow: 0 3px 6px rgba(0,0,0.16), 0 3px 6px rgba(0,0,0.23);/* 0,16 y 0,23 porcentaje de opacidad*/
 	border-radius: 10px;
 	position: relative;
-	padding: 30px;
+	padding: 1,8em;
+	/*overflow: scroll;*/
+	overflow-y: scroll;               /*Define el comportamiento del contenido que sale del elemento*/
+	overflow-x: hidden;
 }
+/*Mobile first: Las paginas deben estar diseñadas pensando primero en pantallas pequeñas y luego ajustarlas a pantallas de computadoras mediante media queris*/
+.content{
+	padding: 1em;
+}
+td:nth-of-type(1){                     /*Seleccion en este caso el primero de los td que se encuentran uno al lado del otro*/
+	/*background-color: red;*/
+	font-size: 1,5em;                    /*Agranda la letra de los primero td despues de cada th*/
+	font-weight: bold;                   /*Pone las letras en negritas*/
+	color: #52B35C;
+}
+td{
+	display: block;
+	width: 100%;
+}
+th{
+	display: none;
+}
+/*Mobile first*/
 .title{
 	text-transform: uppercase;  /*Modifica el texto de las etiquetas con clase titulo y uppercase pone las letras en mayusculas*/
     /*Capitalize pone las primeras letras de cada palabra en mayusculas
@@ -97,6 +121,8 @@ a:active{
 	font-weight: bold;
 	color: #52B35C;
 	font-size: 1,2em;
+	padding: 2em;
+	display: inline-block;
 }
 .position{
 	background-color: #52B35C;
@@ -130,6 +156,34 @@ a:active{
 	align-items: center;			/*align-items y justify-content centra los elementos*/
 	justify-content: center;
 }
+
+/*Media queris*/
+@media (min-width: 900px) {               /*Se cumplira solo en paginas que sean de un minimo de 900 pixeles*/
+	th{
+		display: table-cell;                  /*Muestra todas las celdas de la tabla*/
+	}
+	td{
+		width: auto;
+		display: table-cell;
+	}
+	td:nth-last-of-type(1){
+		font-size: 1em;
+	}
+	.content{
+		padding: 1,8em;
+	}
+}
+@media (min-heigth: 550px) {              /*Se cumplira en pantalla que tengan como minimo 550px*/
+	.content{
+		height: 500px;                        /*Ajustara el content a 500 pixeles*/
+	}
+}
+
+
+
+
+
+
 /*
 	position:
 	static:   no modifica la posicion del elemento
@@ -138,4 +192,23 @@ a:active{
 	fixed     muestra el elemento siempre ajustado al viewport, lo muestra aunque se este scrolleando
 	sticky    alterna entre absolut y fixed, cuando se scrollea y el elemento comienza a salirse del viewport
 			  lo deja pegado en la pantalla
+*/
+/*
+	Unidades de medida
+		Absolutas:
+			Pixeles (px)
+			centimetros(cm)
+			milimetros(mm)
+			picas(pc)
+			puntos(pt)
+
+		Relativas:
+			Porcentajes %: Relativa al tamaños del contenedor
+			Em: Relativos al tamaño de la fuente
+			Ex: Relativos al tamaño en alto de la letra x  minuscula de la fuente usada
+			Rems: Similar a ems utilizan la fuente de la etiqueta html
+			Relativas al viewport
+				vW:Cada unidad equivale al 1% del tamaño del viewport
+				vh: Cada unidad equivale al 1% del alto del viewport
+
 */
